@@ -36,7 +36,7 @@ pip install drf-request-id   # (PyPI soon; until then: pip install git+https://g
 ```python
 MIDDLEWARE = [
     "drf_request_id.middleware.RequestIDMiddleware",  # as high as possible
-    ...
+    ...,
 ]
 ```
 
@@ -49,9 +49,7 @@ LOGGING = {
         "request_id": {"()": "drf_request_id.logging.RequestIDLogFilter"},
     },
     "formatters": {
-        "request": {
-            "format": "%(asctime)s [%(request_id)s] %(name)s %(levelname)s %(message)s"
-        },
+        "request": {"format": "%(asctime)s [%(request_id)s] %(name)s %(levelname)s %(message)s"},
     },
     "handlers": {
         "console": {
